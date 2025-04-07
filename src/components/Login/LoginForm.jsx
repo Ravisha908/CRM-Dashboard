@@ -16,7 +16,7 @@ const LoginForm = () => {
       localStorage.setItem("isLoggedIn", "true");
       navigate("/app");
     } else {
-      navigate("/login");
+      navigate("/");
     }
   }
 

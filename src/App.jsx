@@ -6,13 +6,20 @@ import Employee from "./Pages/Employee";
 import EmployeeListPage from "./Pages/EmployeeListPage";
 import Login from "./Pages/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PrivateRoute from "./Pages/PrivateRoute";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route element={<AppLayout />}>
+        <Route path="/login" element={<Login />} />
+        <Route
+          element={
+            <PrivateRoute>
+              <AppLayout />
+            </PrivateRoute>
+          }
+        >
           <Route path="/app" element={<AppContent />} />
           <Route path="/employee" element={<Employee />} />
           <Route path="/employee-list" element={<EmployeeListPage />} />

@@ -1,10 +1,10 @@
 import AppHeaderRight from "./AppHeaderRight";
 import AppHeaderSearchbar from "./AppHeaderSearchbar";
 
-function AppHeader() {
+function AppHeader({ isSidebar, setIsSidebar }) {
   return (
     <div className="app-header">
-      <AppHeaderSearchbar />
+      <AppHeaderSearchbar isSidebar={isSidebar} setIsSidebar={setIsSidebar} />
       <AppHeaderRight />
     </div>
   );

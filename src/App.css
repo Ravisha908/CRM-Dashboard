@@ -749,101 +749,9 @@ h4.birthday-people-name {
   display: none;
 }
 
-/* ----Mobile CSS------ */
-
-@media(max-width:550px) {
-  .sidebar {
-    display: none;
-  }
-
-  .mobile-menu-icon {
-    display: block;
-  }
-
-  .app-content {
-    flex-basis: 100%;
-  }
-
-  .appheader-searchbar {
-    flex-basis: 20%;
-  }
-
-  .appheader-search {
-    border: 0;
-  }
-
-  .appheader-searchbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .appheader-search input {
-    display: none;
-  }
-
-  .person-info .person-name p {
-    display: none;
-  }
-
-  .person-info .person-name img {
-    width: 36px;
-    height: 36px;
-  }
-
-  .app-header {
-    margin-left: 0px;
-    padding: 8px 20px;
-  }
-
-  .dashboard-content {
-    margin-left: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .dashboard-content {
-    flex-wrap: wrap;
-  }
-
-  .dashboard-attendance-cards {
-    flex-wrap: wrap;
-  }
-
-  .dashboard-left-content {
-    flex-basis: 100%;
-  }
-
-  .payroll-taskrequest {
-    flex-wrap: wrap;
-  }
-
-  .dashboardright-content {
-    flex-basis: 100%;
-  }
-
-  .react-calendar__month-view__days button {
-    padding: 10px;
-  }
-
-  .calendar-container .react-calendar {
-    padding: 10px;
-  }
-
-  /* .dashboardright-content {
-    padding: 30px 0px;
-  } */
-
-  .birthday-peopleboxes {
-    max-width: 300px;
-  }
-
-  .employee-main-content {
-    margin-left: 0px;
-    padding: 20px;
-  }
+.sidebarclose-btn {
+  display: none;
 }
-
 
 .employee-page {
   background-color: #FAFAFA;
@@ -964,4 +872,136 @@ h4.birthday-people-name {
 
 .add-employeebtns-container a.bg-black:hover svg path {
   fill: #171717;
+}
+
+
+/* ----Mobile CSS------ */
+
+@media(max-width:550px) {
+
+
+  .employee-main-content {
+    margin-left: 0px;
+  }
+
+  .employee-page-boxes {
+    flex-wrap: wrap;
+  }
+
+  .sidebar.sidebar-inactive {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -232px;
+    transition: .5s ease;
+  }
+
+  .sidebar.sidebar-active {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0px;
+    transition: .5s ease;
+  }
+
+  .sidebar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sidebar-logo h2 {
+    flex-basis: 70%;
+  }
+
+  .sidebarclose-btn {
+    flex-basis: 30%;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .app-content {
+    flex-basis: 100%;
+  }
+
+  .appheader-searchbar {
+    flex-basis: 20%;
+  }
+
+  .appheader-search {
+    border: 0;
+  }
+
+  .appheader-searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .appheader-search input {
+    display: none;
+  }
+
+  .person-info .person-name p {
+    display: none;
+  }
+
+  .person-info .person-name img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .app-header {
+    margin-left: 0px;
+    padding: 8px 20px;
+  }
+
+  .dashboard-content {
+    margin-left: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .dashboard-content {
+    flex-wrap: wrap;
+  }
+
+  .dashboard-attendance-cards {
+    flex-wrap: wrap;
+  }
+
+  .dashboard-left-content {
+    flex-basis: 100%;
+  }
+
+  .payroll-taskrequest {
+    flex-wrap: wrap;
+  }
+
+  .dashboardright-content {
+    flex-basis: 100%;
+  }
+
+  .react-calendar__month-view__days button {
+    padding: 10px;
+  }
+
+  .calendar-container .react-calendar {
+    padding: 10px;
+  }
+
+  /* .dashboardright-content {
+    padding: 30px 0px;
+  } */
+
+  .birthday-peopleboxes {
+    max-width: 300px;
+  }
+
+  .employee-main-content {
+    margin-left: 0px;
+    padding: 20px;
+  }
 }

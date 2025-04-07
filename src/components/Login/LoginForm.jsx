@@ -10,11 +10,14 @@ const LoginForm = () => {
     setValue({ ...value, [e.target.name]: e.target.value });
   }
   function handleSubmit(e) {
-    e.preventDefalue();
+    e.preventDefault();
     console.log(value);
-    value.username === "user" && value.password === "pass"
-      ? navigate("/app")
-      : navigate("/");
+    if (value.username === "user" && value.password === "pass") {
+      localStorage.setItem("isLoggedIn", "true");
+      navigate("/app");
+    } else {
+      navigate("/login");
+    }
   }
 
   return (
@@ -45,7 +48,7 @@ const LoginForm = () => {
         </div>
 
         <label className="remember-check">
-          <input type="checkbox" />
+          <input type="checkbox" required />
           <p>Remember Me</p>
         </label>
         <div className="login-submit">
